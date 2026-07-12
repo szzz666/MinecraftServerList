@@ -1,0 +1,133 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #f4f0df;
+  background: #0d1510;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(rgba(10, 20, 13, 0.9), rgba(10, 20, 13, 0.96)),
+    repeating-linear-gradient(45deg, #1c3122 0 24px, #16291c 24px 48px);
+}
+
+.redirect-card {
+  position: relative;
+  width: min(100%, 640px);
+  padding: clamp(32px, 7vw, 64px);
+  overflow: hidden;
+  border: 2px solid #527b40;
+  border-radius: 4px;
+  background: #142019;
+  box-shadow: 12px 12px 0 #080d0a;
+}
+
+.block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(135deg, #6ea64f 50%, #4e803a 50%);
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #83bc61;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  max-width: 520px;
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.description {
+  margin: 24px 0 16px;
+  color: #bdc9bd;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.features {
+  margin: 0 0 24px;
+  padding: 16px;
+  border-left: 3px solid #527b40;
+  background: #101a14;
+}
+
+.features h2 {
+  margin: 0 0 8px;
+  color: #dfe8db;
+  font-size: 1rem;
+}
+
+.features p {
+  margin: 0;
+  color: #9eaf9f;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+  color: #dfe8db;
+}
+
+.loader {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #405744;
+  border-top-color: #83bc61;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 2px solid #9bd270;
+  color: #101810;
+  background: #83bc61;
+  box-shadow: 4px 4px 0 #39572c;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #9bd270;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #39572c;
+}
+
+.notice {
+  margin: 24px 0 0;
+  color: #dbb96b;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader { animation: none; }
+}
